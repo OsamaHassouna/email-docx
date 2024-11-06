@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template Documentation</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="wss-docx-header">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-lg-12 text-left">
+                    <div class="logo">
+                        <img src="https://www.worldofss.com/wp-content/themes/wss/assets/images/logo-text.png"
+                            alt="logo" width="200">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="wss-docx-nav">
+                        <li>
+                            <a href="#getting_started" (click)="topFunction()">Getting Started</a>
+                        </li>
+                        <li>
+                            <a href="#general_structure">General Structure</a>
+                            <ul class="sub-menu" style="list-style: disc;">
+                                <li>
+                                    <a href="#general_structure">Head Structure</a>
+                                </li>
+                                <li>
+                                    <a href="#body_structure">Body Structure</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="#header">Email Header Structure</a>
+                                            <ul class="sub-menu" style="list-style: circle;">
+                                                <li>
+                                                    <a href="#header_options">Email Header Options</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#body">Email Body Structure</a>
+                                            <ul class="sub-menu" style="list-style: circle;">
+                                                <li>
+                                                    <a href="#body_options">Email Body Options</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#footer">Email Footer Structure</a>
+                                            <ul class="sub-menu" style="list-style: circle;">
+                                                <li>
+                                                    <a href="#footer_options">Email Footer Options</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#components">Components</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#vertical_spacing">Vertical spacing</a>
+                                </li>
+                                <li>
+                                    <a href="#horizontal_spacing">Horizontal spacing</a>
+                                </li>
+                                <li>
+                                    <a href="#add_images">Add Images</a>
+                                </li>
+                                <li>
+                                    <a href="#background_images">Add Background Images</a>
+                                </li>
+                                <li>
+                                    <a href="#buttons">Add Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="#text">Add Texts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#modals">Templates</a>
+                        </li>
+                        <li>
+                            <a href="#download_template">Download General Template</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8">
+                    <div class="wss-docx-body">
+                        <!-- Getting Started -->
+                        <div class="docx-welcome" id="getting_started">
+                            <h3 style="margin-bottom: 20px;font-weight: 700;">
+                                Welcome to
+                                <br>
+                                Email Template Guide of
+                                <br>
+                                World of Systems and Softwares
+                            </h3>
+                        </div>
+
+                        <!-- General Strtucture | HEAD -->
+                        <div class="docx-head-structure" id="general_structure">
+                            <h3 style="margin-top: 20px;font-weight: 700;">General Structure
+                            </h3>
+                            <h4 id="head_structure" style="font-size: 18px;margin-bottom: 10px;font-weight: 700;">Head
+                                Structure</h4>
+                            <p style="margin-bottom: 15px;">
+                                You’ll need to begin your HTML email template with an HTML doctype. In this case we are
+                                going to use the HTML5 doctype, set our language to English
+                                with
+                                <code>&lt;html lang="en"&gt;</code> or set our language to Arabic with
+                                <code>&lt;html lang="ar"&gt;</code>,
+                                and also include the XML and Microsoft
+                                Office namespaces (the <code>xmlns</code> bits).
+                                <br> We are going to need these a few lines
+                                down, as I'll explain.
+                            </p>
+                            <div class="docx-code">
+                                <button class="btn-copy" onclick="CopyToClipboard('copy_head')">
+                                    <span class="tooltiptext" id="myTooltip">Copy</span>
+                                </button>
+                                <pre>
+                                    <code style="border-color: transparent; font-size: 14px;" id="copy_head">
+    &lt;!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+    &lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+        xmlns:o="urn:schemas-microsoft-com:office:office"&gt;
+    &lt;head&gt;
+        &lt;!--[if gte mso 9]&gt;
+            &lt;xml&gt;
+                &lt;o:OfficeDocumentSettings&gt;
+                &lt;o:AllowPNG/&gt;
+                &lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;
+                &lt;/o:OfficeDocumentSettings&gt;
+            &lt;/xml&gt;
+        &lt;![endif]--&gt;
+        &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+        &lt;meta name="format-detection" content="date=no" /&gt;
+        &lt;meta name="format-detection" content="address=no" /&gt;
+        &lt;meta name="format-detection" content="telephone=no" /&gt;
+        &lt;meta name="x-apple-disable-message-reformatting" /&gt;
+        &lt;!-- ====== Font Link ====== --&gt;
+        &lt;!--[if !mso]&gt;&lt;!--&gt;
+        &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+        &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+        &lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet"&gt;
+        &lt;!--&lt;![endif] --&gt;
+        &lt;title&gt;Title&lt;/title&gt;
+        &lt;!--[if gte mso 9]&gt;
+            &lt;style type="text/css" media="all"&gt;
+                sup { font-size: 100% !important; }
+            &lt;/style&gt;
+        &lt;![endif]--&gt;
+        &lt;style type="text/css" media="screen"&gt;
+            body {padding: 0 !important;margin: 0 !important;display: block !important;min-width: 100% !important;width: 100% !important;background: #fff;-webkit-text-size-adjust: none}
+            table, td, div, h1, p {font-family: Arial, sans-serif;}
+            a {text-decoration: none}
+            p {padding: 0 !important;margin: 0 !important}
+            img {-ms-interpolation-mode: bicubic;/* Allow smoother rendering of resized image in Internet Explorer */}
+            /* Mobile styles */
+            @media only screen and (max-device-width: 480px),
+            only screen and (max-width: 480px) {
+                .td {
+                    width: 100% !important;
+                    min-width: 100% !important;
+                }
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    
+    &lt;!--&lt;File Content | Next Step --&gt;
+    
+    
+    &lt;/html&gt;
+                                    </code>
+                                </pre>
+                            </div>
+
+                            <p style="margin-bottom: 15px;">
+                                There are quite a few things in the code above, but it's the bare minimum you need to
+                                ensure
+                                your final email renders beautifully everywhere.
+                                <br>
+                                Firstly, we have a few meta tags to ensure the right text encoding, viewport scaling
+                                across
+                                different mobile devices, and one to stop Apple from adjusting the size in a strange way
+                                in
+                                their mail apps.
+                                <br>
+                                <br>
+                                <!-- Underneath the <code>&lt;title&gt;&lt;/title&gt;</code> tag  -->
+                                you'll see some code between
+                                <code>&lt;!--[if mso]&gt;</code> and <code>&lt;![endif]--&gt;</code>. Placing code
+                                inside
+                                those two tags means that only Microsoft Outlook on Windows will apply it <b>(mso =
+                                    'Microsoft Outlook')</b>. And in there, we have a small amount of XML that will
+                                ensure
+                                that PNG images display at the right size in Outlook on Windows. The xlmns settings that
+                                we
+                                put in the html tag ensures this code gets interpreted properly.
+                                <br>
+                                <br>
+                                Underneath that, we have a style tag with just a couple of CSS rules. The first sets the
+                                font for all our main elements, and this is for the benefit of Gmail webmail, which will
+                                override our font settings unless we include this.
+                                <br> <i>*If you end up changing your fonts later, be sure to make the change here
+                                    too.*</i>
+
+                                <br>
+                                <br>
+                                If you want to add new style you can add them between
+                                <code>&lt;style&gt;</code> and <code>&lt;/style&gt;</code>.
+                            </p>
+
+                        </div>
+
+                        <!-- General Strtucture | BODY -->
+                        <div class="docx-body-structure" id="body_structure">
+                            <h4 style="font-size: 18px;margin-top: 10px;margin-bottom: 10px;font-weight: 700;">Body
+                                Structure</h4>
+                            <p>
+
+                            </p>
+                            <!-- General Notes -->
+                            <p style="margin-bottom: 15px;">
+                                we’ll add an overall structure for our email, starting with a
+
+                                <code>&lt;body&gt;</code> tag. Add the code below directly underneath the
+                                <code>&lt;/head&gt;</code>
+                                tag:
+                            </p>
+                            <div class="docx-code">
+                                <button class="btn-copy" onclick="CopyToClipboard('copy_body')">
+                                    <span class="tooltiptext" id="myTooltip">Copy</span>
+                                </button>
+                                <pre>
+                                    <code style="border-color: transparent; font-size: 14px;" id="copy_body">
+    &lt;body
+    style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#ffffff; -webkit-text-size-adjust:none;"&gt;
+    
+        &lt;div
+            style="display:block !important; min-width:100% !important; width:100% !important; background:#ffffff; -webkit-text-size-adjust:none; direction: rtl !important;"&gt;
+            &lt;!-- Main --&gt;
+            &lt;table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
+                style="border-spacing:0;border-collapse:collapse; direction: rtl;"&gt;
+            
+                &lt;!-- Email Structure | Next Step --&gt;
+    
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <p>
+                                <br>
+                                All our tables will be set to <code>role="presentation"</code>. This makes them more
+                                accessible,
+                                as it
+                                tells
+                                screen
+                                readers to treat it as a visual table, not a data table.
+                                <br>
+                                <br>
+                                since align is actually a deprecated HTML property
+                                We use it because email clients vary so widely in their level of CSS support, and often
+                                we
+                                still
+                                need to
+                                use
+                                deprecated HTML to ensure everything displays properly everywhere. In this instance, it
+                                is
+                                because
+                                Outlook
+                                for Windows does not obey margin:0 auto; in CSS to center things.
+                                <br>
+                                <br>
+                                make sure you always set the padding on your table cells to zero in the inline styles,
+                                e.g.
+                                <code>&lt;td style="padding:0;"&gt;</code>, otherwise email clients will all add their
+                                own
+                                amount of
+                                padding.
+                                When we
+                                do add padding ourselves, we can adjust this value, but if there is no padding to be
+                                applied
+                                to
+                                any of
+                                the
+                                sides, you must explicitly set it to zero.
+                                <br>
+                                <br>
+                                you can use spacer divs or spacer cells. Just include a non-breaking space character
+                                (<code>&amp;nbsp;</code>)
+                                inside,
+                                set a matching height and line height, and be sure to include
+                                <code>mso-line-height-rule:exactly</code>
+                                which
+                                will
+                                ensure Microsoft Outlook for Windows renders it at the pixel-perfect size.
+                                <i>(If you are creating horizontal space, you need to specify a width instead of height,
+                                    and
+                                    may
+                                    need to
+                                    also
+                                    add font-size)</i>
+
+                            </p>
+
+                            <br>
+
+                            <!-- Email Header Structure  -->
+                            <div class="docx-email-header" id="header">
+                                <h3 style="font-size: 16px; padding: 10px 0;font-weight: 700;">• Email
+                                    Header
+                                    Structure</h3>
+                                <p>
+                                    In our email design we can see that the layout is divided into a few logical
+                                    sections.
+                                    After We create the main table, we’ll create a row for each Header, body and footer
+                                    of
+                                    the
+                                    template.
+                                    <br>
+                                    Each row will contain a table so that we can make any design with ease.
+                                    As shown in code below,
+                                    <br>
+                                </p>
+                                <div class="docx-code">
+                                    <button class="btn-copy" onclick="CopyToClipboard('copy_email_header')">
+                                        <span class="tooltiptext" id="myTooltip">Copy</span>
+                                    </button>
+                                    <pre>
+                                        <code style="border-color: transparent; font-size: 14px;" id="copy_email_header">
+    &lt;!-- Header Content --&gt;
+    &lt;tr&gt;
+        &lt;td colspan="99" style="padding:0;" valign="top"&gt;
+    
+            &lt;!-- Header | Design --&gt;
+            &lt;table width="100%" height="100" border="0" cellpadding="0" cellspacing="0"&gt;
+                &lt;tr&gt;
+                    &lt;td bgcolor="#ffffff" valign="top" dir="rtl"&gt;
+    
+                        &lt;!-- structure --&gt;
+                        &lt;table cellpadding="0" cellspacing="0" border="0" width="100%"&gt;
+                            &lt;!-- V Spacing --&gt;
+                            &lt;tr&gt;
+                                &lt;td style="line-height:25px;height:25px;mso-line-height-rule:exactly;"&gt;
+                                &amp;nbsp;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;!-- content --&gt;
+                            &lt;tr&gt;
+                                &lt;td align="right"&gt;
+    
+                                &lt;/td&gt;
+    
+                                &lt;td align="center"&gt;
+    
+                                &lt;/td&gt;
+    
+                                &lt;td align="left"&gt;
+    
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;!-- V Spacing --&gt;
+                            &lt;tr&gt;
+                                &lt;td style="line-height:25px;height:25px;mso-line-height-rule:exactly;"&gt;
+                                &amp;nbsp;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+                            
+                                        </code>
+                                    </pre>
+                                </div>
+
+                                <h4 style="font-size: 14px; padding: 10px 0;font-weight: 700;margin-top: 10px;"
+                                    id="header_options">Email Header Options</h4>
+                                <ul class="structure-options-list">
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Height</p>
+                                        <p style="margin-bottom: 10px;">
+                                            We should add <code>height=""</code>height value for the header, so that the
+                                            output
+                                            design will be the same in different email engines.
+
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;">
+&lt;table width="100%" <span style="color: blue;">height="100"</span> border="0" cellpadding="0" cellspacing="0"&gt;
+&lt;tr&gt;
+    &lt;td bgcolor="#ffffff"  valign="top" dir="rtl"&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Background
+                                            Color</p>
+                                        <p style="margin-bottom: 10px;">
+                                            After the <code>&lt;!-- Header | Design --&gt;</code> we can change the
+                                            background color of the header
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;">
+&lt;table width="100%" height="100" border="0" cellpadding="0" cellspacing="0"&gt;
+&lt;tr&gt;
+    &lt;td <span style="color: blue;">bgcolor="#ffffff"</span>  valign="top" dir="rtl"&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Background
+                                            Image</p>
+                                        <p style="margin-bottom: 10px;">
+                                            Adding Background Image to Header is abit tricky as we should add it in VML
+                                            for outlook Engine to read it, as shown below.
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;">
+&lt;!-- Header | Design --&gt;
+&lt;table width="100%" <span style="color: blue;">height="header-height"</span> border="0" cellpadding="0" cellspacing="0"&gt;
+    &lt;tr&gt;
+        &lt;td <span style="color: blue;">background="background-image-link" bgcolor="bg color if image not loaded"</span>
+            style="background-size: cover;" valign="top" dir="rtl"&gt;
+
+            &lt;!--[if gte mso 9]&gt;
+                    &lt;v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;<span style="color: blue;">height:header-height;"</span>&gt;
+                    &lt;v:fill type="tile" <span style="color: blue;">src="background-image-link" color="bg color if image not loaded"</span> /&gt;
+                    &lt;v:textbox inset="0,0,0,0"&gt;
+                &lt;![endif]--&gt;
+                &lt;!-- structure --&gt;
+            &lt;table cellpadding="0" cellspacing="0" border="0" width="100%"&gt;
+            &lt;/table&gt;
+            &lt;!--[if gte mso 9]&gt;
+                &lt;/v:textbox&gt;
+                &lt;/v:rect&gt;
+            &lt;![endif]--&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        <br>
+                                        </p>
+                                        <p style="margin-bottom: 10px;">** Attributes with blue color need to be changed
+                                            as your Email design.</p>
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Header
+                                            Vertical Spacing</p>
+                                        <p style="margin-bottom: 10px;">
+                                            After the <code>&lt;!-- structure --&gt;</code> we can design our header
+                                            content,
+                                            but before that we some rows as first and last row. These rows make some
+                                            vertical
+                                            spacing for the content to make it vertically centered.
+                                        <div class="docx-code">
+                                            <pre>
+                                                        <code style="border-color: transparent; font-size: 14px;">
+    &lt;table cellpadding="0" cellspacing="0" border="0" width="100%"&gt;
+        &lt;!-- V Spacing --&gt;<span style="color: blue;">
+        &lt;tr&gt;
+            &lt;td style="line-height:25px;height:25px;mso-line-height-rule:exactly;"&gt;
+            &amp;nbsp;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        </span>
+        &lt;!-- content --&gt;
+        &lt;tr&gt;
+            &lt;td align="right"&gt;
+    
+            &lt;/td&gt;
+    
+            &lt;td align="center"&gt;
+    
+            &lt;/td&gt;
+    
+            &lt;td align="left"&gt;
+    
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    
+        &lt;!-- V Spacing --&gt;<span style="color: blue;">
+        &lt;tr&gt;
+            &lt;td style="line-height:25px;height:25px;mso-line-height-rule:exactly;"&gt;
+            &amp;nbsp;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    </span>
+    &lt;/table&gt;
+                                                        </code>
+                                                    </pre>
+                                        </div>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Header
+                                            Content</p>
+                                        <p style="margin-bottom: 10px;">
+                                            Header structure divided into 3 section right, center and left.You can add
+                                            the
+                                            content from Components as email design.
+                                        <div class="docx-code">
+                                            <pre>
+                                                    <code style="border-color: transparent; font-size: 14px;">
+        &lt;!-- content --&gt;
+        &lt;tr&gt;
+            <span style="color: blue;">&lt;td align="right"&gt; &lt;/td&gt;</span>
+        
+            <span style="color: blue;">&lt;td align="center"&gt;&lt;/td&gt;</span>
+        
+            <span style="color: blue;">&lt;td align="left"&gt;&lt;/td&gt;</span>            
+        &lt;/tr&gt;
+                                                    </code>
+                                                </pre>
+                                        </div>
+                                        </p>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- Email Body Structure  -->
+                            <div class="docx-email-body" id="body">
+                                <h3 style="font-size: 16px; padding: 10px 0;font-weight: 700;margin-top: 10px;">• Email
+                                    Body
+                                    Structure
+                                </h3>
+                                <p style="margin-bottom: 10px;">
+                                    Template body structure is simplier than header or footer.
+                                </p>
+                                <div class="docx-code">
+                                    <button class="btn-copy" onclick="CopyToClipboard('copy_email_body')">
+                                        <span class="tooltiptext" id="myTooltip">Copy</span>
+                                    </button>
+                                    <pre>
+                                        <code style="border-color: transparent; font-size: 14px;" id="copy_email_body">
+&lt;!-- Body Content --&gt;
+&lt;tr&gt;
+    &lt;td colspan="99" class="td" style="font-size:0pt; line-height:0pt; padding:0px; margin:0px;"&gt;
+    
+        &lt;!-- Body | design --&gt;
+        &lt;table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff"&gt;
+            &lt;tr&gt;
+                &lt;td colspan="99" align="center" valign="top"&gt;
+                    &lt;!-- structure --&gt;
+                    &lt;table cellpadding="0" cellspacing="0" border="0" width="100%" align="center"&gt;
+                        &lt;!-- V Spacing --&gt;
+                        &lt;tr&gt;
+                            &lt;td colspan="99"
+                                style="line-height:80px;height:80px;mso-line-height-rule:exactly;"&gt;
+                                &amp;nbsp;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+        
+                        &lt;!-- Content --&gt;
+                        &lt;tr&gt;
+                            &lt;td colspan="99" align="center"&gt;
+        
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;!-- V Spacing --&gt;
+                        &lt;tr&gt;
+                            &lt;td colspan="99"
+                                style="line-height:20px;height:20px;mso-line-height-rule:exactly;"&gt;
+                                &amp;nbsp;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;!-- Content --&gt;
+                        &lt;tr&gt;
+                            &lt;td colspan="99" align="center"&gt;
+        
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+        
+                        &lt;!-- V Spacing --&gt;
+                        &lt;tr&gt;
+                            &lt;td colspan="99"
+                                style="line-height:80px;height:80px;mso-line-height-rule:exactly;"&gt;
+                                &amp;nbsp;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+        
+                    &lt;/table&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    
+    &lt;/td&gt;
+&lt;/tr&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+
+                                <h4 style="font-size: 14px; padding: 10px 0;font-weight: 700; margin-top: 10px;"
+                                    id="body_options">Email Body Options</h4>
+                                <ul class="structure-options-list">
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Height</p>
+                                        <p style="margin-bottom: 10px;">
+                                            Height attribute <b>isn't</b> mandatory here as the content differ from
+                                            email to another.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Content</p>
+                                        <p style="margin-bottom: 10px;">
+                                            You can use the <a href="#components">components</a>
+                                            section as guidlines for the content you need.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Vertical
+                                            Spacing</p>
+                                        <p style="margin-bottom: 10px;">
+                                            Same as Email Header and Email Footer first two row we ad them as vertical
+                                            spacing, in addition to that you need to add vertical spacing between every
+                                            row you add in content as <b>Padding</b> and <b>Margin</b> don't work.
+                                        </p>
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;" >
+    
+&lt;!-- structure --&gt;
+&lt;table cellpadding="0" cellspacing="0" border="0" width="100%" align="center"&gt;
+    <span style="color: blue;">&lt;!-- V Spacing --&gt;
+    &lt;tr&gt;
+        &lt;td colspan="99"
+            style="line-height:80px;height:80px;mso-line-height-rule:exactly;"&gt;
+            &amp;nbsp;
+        &lt;/td&gt;
+    &lt;/tr&gt;</span>
+
+    &lt;!-- Content --&gt;
+    &lt;tr&gt;
+        &lt;td colspan="99" align="center"&gt;
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    <span style="color: blue;">&lt;!-- V Spacing --&gt;
+    &lt;tr&gt;
+        &lt;td colspan="99"
+            style="line-height:20px;height:20px;mso-line-height-rule:exactly;"&gt;
+            &amp;nbsp;
+        &lt;/td&gt;
+    &lt;/tr&gt;</span>
+    &lt;!-- Content --&gt;
+    &lt;tr&gt;
+        &lt;td colspan="99" align="center"&gt;
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+
+    <span style="color: blue;"> &lt;!-- V Spacing --&gt;
+    &lt;tr&gt;
+        &lt;td colspan="99"
+            style="line-height:80px;height:80px;mso-line-height-rule:exactly;"&gt;
+            &amp;nbsp;
+        &lt;/td&gt;
+    &lt;/tr&gt;</span>
+
+&lt;/table&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">content:
+                                            &lt;td&gt;
+                                            Attributes
+                                        </p>
+                                        <p>
+                                            For every td you add as a content can have 2 attributes
+                                            <code>align="center"</code> or if it's one column you should add
+                                            <code>colspan="99"</code> too.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">
+                                            Complicated Content
+                                        </p>
+                                        <p style="margin-bottom: 10px;">
+                                            Some designs have complicated structure as content. Inside td you should Add
+                                            new Table and create the new structure with ease.
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;" id="copy_email_body">
+&lt;!-- Content --&gt;
+&lt;tr&gt;
+    &lt;td colspan="99" align="center"&gt;
+        &lt;table cellpadding="0" cellspacing="0" border="0" width="100%" align="center"&gt;
+            &lt;tr&gt;
+                &lt;td colspan="99" align="center"&gt;
+            
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </p>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- Email Footer Structure  -->
+                            <div class="docx-email-footer" id="footer">
+                                <h3 style="font-size: 16px; padding: 10px 0;font-weight: 700; margin-top: 10px;">
+                                    • Email Footer Structure
+                                </h3>
+                                <p>
+                                    Footer Structure is the same as <a href="#header">Header Structure</a>.
+                                    <br>
+                                    In code below, The general structure of Footer with <b> border top </b>as example.
+                                <div class="docx-code">
+                                    <button class="btn-copy" onclick="CopyToClipboard('copy_email_footer')">
+                                        <span class="tooltiptext" id="myTooltip">Copy</span>
+                                    </button>
+                                    <pre>
+                                        <code style="border-color: transparent; font-size: 14px;" id="copy_email_footer">
+&lt;!-- Footer Content --&gt;
+&lt;tr&gt;
+    &lt;td colspan="99" class="td" style="padding:0px;"&gt;
+
+        &lt;!-- Footer | design --&gt;
+        &lt;table width="100%" height="100" border="0" cellspacing="0" cellpadding="0"&gt;
+            <span style="color: blue;">&lt;!-- Top Border --&gt;
+            &lt;tr&gt;
+                &lt;td colspan="99"
+                    style="line-height:5px;height:5px;mso-line-height-rule:exactly; background-color: #E6E6E6;"&gt;
+                    &amp;nbsp;
+                &lt;/td&gt;
+            &lt;/tr&gt;</span>
+            &lt;!-- structure --&gt;
+            &lt;tr&gt;
+                &lt;td colspan="99" valign="top" bgcolor="#ffffff"&gt;
+
+                    &lt;table cellpadding="0" cellspacing="0" border="0" width="100%"&gt;
+                        &lt;!-- V Spacing --&gt;
+                        &lt;tr&gt;
+                            &lt;td style="line-height:30px;height:30px;mso-line-height-rule:exactly;"&gt;
+                            &amp;nbsp;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;!-- content --&gt;
+                        &lt;tr&gt;
+                            &lt;td align="right"&gt;
+
+                            &lt;/td&gt;
+
+                            &lt;td align="center"&gt;
+
+                            &lt;/td&gt;
+
+                            &lt;td align="left"&gt;
+
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;!-- V Spacing --&gt;
+                        &lt;tr&gt;
+                            &lt;td style="line-height:30px;height:30px;mso-line-height-rule:exactly;"&gt;
+                            &amp;nbsp;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                                </p>
+
+                                <h4 style="font-size: 14px; padding: 10px 0;font-weight: 700; margin-top: 10px;"
+                                    id="footer_options">Email Footer Options</h4>
+                                <ul class="structure-options-list">
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Height</p>
+                                        <p>Adding The height is also mandatory in Footer.</p>
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;">
+&lt;!-- Footer | design --&gt;
+&lt;table width="100%" <span style="color: blue;">height="100"</span> border="0" cellspacing="0" cellpadding="0"&gt;
+
+    &lt;!-- structure --&gt;
+    &lt;tr&gt;
+        &lt;td colspan="99" valign="top" bgcolor="#ffffff"&gt;
+
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">background
+                                            color</p>
+                                        <p>You can add background color to footer as shown below.</p>
+
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;">
+&lt;!-- Footer | design --&gt;
+&lt;table width="100%" height="100" border="0" cellspacing="0" cellpadding="0"&gt;
+
+    &lt;!-- structure --&gt;
+    &lt;tr&gt;
+        &lt;td colspan="99" valign="top"  <span style="color: blue;">bgcolor="#ffffff"</span>&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">background
+                                            Image</p>
+                                        <p>Adding background image isthe same as adding it to header as shown below.</p>
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;">
+&lt;!-- Footer | Design --&gt;
+&lt;table width="100%" <span style="color: blue;">height="footer-height"</span> border="0" cellpadding="0" cellspacing="0"&gt;
+    &lt;tr&gt;
+        &lt;td <span style="color: blue;">background="background-image-link" bgcolor="bg color if image not loaded"</span>
+            style="background-size: cover;" valign="top" dir="rtl"&gt;
+
+            &lt;!--[if gte mso 9]&gt;
+                    &lt;v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;<span style="color: blue;">height:footer-height;"</span>&gt;
+                    &lt;v:fill type="tile" <span style="color: blue;">src="background-image-link" color="bg color if image not loaded"</span> /&gt;
+                    &lt;v:textbox inset="0,0,0,0"&gt;
+                &lt;![endif]--&gt;
+                &lt;!-- structure --&gt;
+            &lt;table cellpadding="0" cellspacing="0" border="0" width="100%"&gt;
+            &lt;/table&gt;
+            &lt;!--[if gte mso 9]&gt;
+                &lt;/v:textbox&gt;
+                &lt;/v:rect&gt;
+            &lt;![endif]--&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        <br>
+                                        </p>
+                                        <p style="margin-bottom: 10px;">** Attributes with blue color need to be changed
+                                            as your Email design.</p>
+
+                                    </li>
+
+                                    <li>
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Footer
+                                            Vertical Spacing</p>
+                                        <p style="margin-bottom: 10px;">
+                                            After the <code>&lt;!-- structure --&gt;</code> we can design our Footer
+                                            content,
+                                            but before that we some rows as first and last row. These rows make some
+                                            vertical
+                                            spacing for the content to make it vertically centered.
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;">
+&lt;!-- structure --&gt;
+&lt;table cellpadding="0" cellspacing="0" border="0" width="100%"
+style="padding: 0px 15px;"&gt;
+    <span style="color: blue;">&lt;tr&gt;
+        &lt;td style="line-height:30px;height:30px;mso-line-height-rule:exactly;"&gt;
+        &amp;nbsp;
+        &lt;/td&gt;
+    &lt;/tr&gt;</span>
+    &lt;tr&gt;
+        &lt;!-- content --&gt;
+        &lt;td align="right"&gt;
+           
+        &lt;/td&gt;
+
+        &lt;td align="center"&gt;
+           
+        &lt;/td&gt;
+
+        &lt;td align="left"&gt;
+           
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    <span style="color: blue;"> &lt;tr&gt;
+        &lt;td style="line-height:30px;height:30px;mso-line-height-rule:exactly;"&gt;
+        &amp;nbsp;
+        &lt;/td&gt;
+    &lt;/tr&gt;</span>
+&lt;/table&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </p>
+                                    </li>
+
+                                    <li style="border: 0;">
+                                        <p style="font-size: 13px;font-weight: 700; margin-bottom: 10px;">Footer
+                                            Content</p>
+                                        <p style="margin-bottom: 10px;">
+                                            Footer structure divided into 3 section right, center and left.You can add
+                                            the
+                                            content from Components as email design.
+                                        <div class="docx-code">
+                                            <pre>
+                                                <code style="border-color: transparent; font-size: 14px;">
+&lt;!-- content --&gt;
+&lt;tr&gt;
+    <span style="color: blue;">&lt;td align="right"&gt; &lt;/td&gt;</span>
+
+    <span style="color: blue;">&lt;td align="center"&gt;&lt;/td&gt;</span>
+
+    <span style="color: blue;">&lt;td align="left"&gt;&lt;/td&gt;</span>            
+&lt;/tr&gt;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <!-- Components  -->
+                        <div class="docx-components" id="components">
+                            <h3 style="margin-top: 10px;margin-bottom: 20px;font-weight: 700;">Components</h3>
+                            <p style="margin-bottom: 10px;">
+                                These are some Components for easier use when creating Email.
+                            </p>
+
+                            <h5 id="vertical_spacing" style="margin-bottom:5px;font-weight: 700;">Vertical spacing </h5>
+                            <p style="margin-bottom: 20px;">
+                                <span style="font-weight: 700;"> Option 1:</span>
+                                <br>
+                                you can change <code>line-height</code> and <code>height</code> values for how mush
+                                space
+                                you
+                                want.
+
+                            <div class="docx-code">
+                                <button class="btn-copy" onclick="CopyToClipboard('copy_vspace_1')">
+                                    <span class="tooltiptext" id="myTooltip">Copy</span>
+                                </button>
+                                <pre style="padding: 0 20px;background: #f5f7f8; white-space: pre-line;">
+                                    <code  style="border-color: transparent; font-size: 14px;" id="copy_vspace_1">
+&lt;td colspan="99" style="<span style="color: blue;">line-height:10px;height:10px;</span>mso-line-height-rule:exactly;"&gt; &amp;nbsp; &lt;/td&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            </p>
+
+                            <p style="margin-bottom: 20px;">
+                                <span style="font-weight: 700;"> Option 2:</span>
+                                <br>
+                                you can change <code>line-height</code> and <code>height</code> values for how mush
+                                space
+                                you
+                                want.
+                            <div class="docx-code">
+                                <button class="btn-copy" onclick="CopyToClipboard('copy_vspace_2')">
+                                    <span class="tooltiptext" id="myTooltip">Copy</span>
+                                </button>
+                                <pre style="padding: 0 20px;background: #f5f7f8;">
+                                    <code  style="border-color: transparent; font-size: 14px;" id="copy_vspace_2">
+&lt;td style="padding: 0;"&gt;
+    &lt;div style="<span style="color: blue;">line-height:10px;height:10px;</span>mso-line-height-rule:exactly;"&gt;
+    &amp;nbsp;
+    &lt;/div&gt;
+&lt;/td&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            </p>
+
+                            <p style="margin-bottom: 20px;">
+                                <span style="font-weight: 700;">Option 3:</span>
+                                <br>
+                                you can change <code>height</code> values for how mush space you want.
+                            <div class="docx-code">
+                                <button class="btn-copy" onclick="CopyToClipboard('copy_vspace_3')">
+                                    <span class="tooltiptext" id="myTooltip">Copy</span>
+                                </button>
+                                <pre style="padding: 0 20px;background: #f5f7f8;">
+                                    <code  style="border-color: transparent; font-size: 14px;" id="copy_vspace_3">
+&lt;td colspan="99" style="height: 20px;"&gt;
+    &lt;p style="display:inline-block; width: 100%; <span style="color: blue;">height: 20px;</span> direction: rtl; line-height: 1px;"&gt;
+    &amp;nbsp; &amp;nbsp;
+    &lt;/p&gt;
+&lt;/td&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            </p>
+
+                            <h5 id="horizontal_spacing" style="margin-bottom:5px; font-weight: 700;">Horizontal spacing
+                            </h5>
+                            <p style="margin-bottom: 20px;">
+                                you can change <code>width</code> value for how mush space you want.
+                            <div class="docx-code">
+                                <button class="btn-copy" onclick="CopyToClipboard('copy_hspace')">
+                                    <span class="tooltiptext" id="myTooltip">Copy</span>
+                                </button>
+                                <pre style="padding: 0 20px;background: #f5f7f8;">
+                                    <code  style="border-color: transparent; font-size: 14px;" id="copy-hspace">
+&lt;td colspan="99"&gt;
+    &lt;p style="display:inline-block; <span style="color: blue;">width: 30px;</span> font-size:0;padding:0;line-height:0;"&gt;
+    &amp;nbsp;
+    &lt;/p&gt;
+&lt;/td&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            </p>
+
+                            <h5 id="add_images" style="margin-bottom:5px; font-weight: 700;">Add Images </h5>
+                            <p style="margin-bottom: 20px;">
+                                you can Add Image with this code.
+                            <div class="docx-code">
+                                <button class="btn-copy" onclick="CopyToClipboard('copy_addImage')">
+                                    <span class="tooltiptext" id="myTooltip">Copy</span>
+                                </button>
+                                <pre style="padding: 0 20px;background: #f5f7f8;">
+                                    <code  style="border-color: transparent; font-size: 14px;" id="copy_addImage">
+    &lt;td colspan="99" align="" style=""&gt;
+        &lt;img src="https://i.ibb.co/KhyHkdc/logo.png" border="0" width="000" style="height: auto; display: block;"
+        alt=""&gt;
+    &lt;/td&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            </p>
+
+                            <h5 id="background_images" style="margin-bottom:5px; font-weight: 700;">Add Background
+                                Images
+                            </h5>
+                            <div style="margin-bottom: 20px;">
+                                <p style="margin-bottom: 10px;">
+                                    you can Add Background Images with this code.
+                                    <br>
+                                    <b> Note ::</b>
+                                    <br>
+                                    - If fixed height => add to <code>v:rect height:150px;</code> & remove from
+                                    <code>v:textbox style="mso-fit-shape-to-text:true"</code>
+                                </p>
+                                <div class="docx-code">
+                                    <button class="btn-copy" onclick="CopyToClipboard('copy_addBgImage')">
+                                        <span class="tooltiptext" id="myTooltip">Copy</span>
+                                    </button>
+                                    <pre style="padding: 0 20px;background: #f5f7f8;">
+                                        <code  style="border-color: transparent; font-size: 14px;" id="copy_addBgImage">
+&lt;td background="image-link.png" bgcolor="bg-color-if-noimage-loaded" valign="top"&gt;
+    &lt;!--[if gte mso 9]&gt;
+        &lt;v:rect xmlns:v="urn:schemas-microsoft-com:vml" <span style="color: blue;">height:150px;</span> fill="true" stroke="false" style="mso-width-percent:1000;"&gt;
+        &lt;v:fill type="tile" src="image-link.png" color="bg-color-if-noimage-loaded" /&gt;
+        &lt;v:textbox <span style="color: red;">style="mso-fit-shape-to-text:true"</span> inset="0,0,0,0"&gt;
+    &lt;![endif]--&gt;
+    &lt;div&gt;
+    &lt;/div&gt;
+    &lt;!--[if gte mso 9]&gt;
+        &lt;/v:textbox&gt;
+        &lt;/v:rect&gt;
+    &lt;![endif]--&gt;
+&lt;/td&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            <h5 id="buttons" style="margin-bottom:5px; font-weight: 700;">Add Buttons </h5>
+                            <div style="margin-bottom: 20px;">
+                                <p style="margin-bottom: 10px;">
+                                    you can Add Buttons with this code.
+                                    <br>
+                                    <b> Note ::</b>
+                                    <br>
+                                    - Put any Link <code>&lt;a href="" &gt;&lt;/a&gt;</code>inside
+                                    <code>&lt;p&gt;&lt;/p&gt;</code>
+                                    <br>
+                                    - to change border radius => <code>arcsize=(border-radius / height)% </code>
+                                </p>
+                                <!--
+                                =***= 
+                                link a put inside p
+                                • to change border radius => arcsize=(border-radius / height)%  
+                                • variables to dynamicly changes => button-link + v:roundrect(width-height-arcsize-fillcolor) + a style(from background-color to the end)
+                                =***=
+                                -- Problem => mso-hide:all;
+                                -- to make td with same width => add table-layout:fixed; on table
+                            -->
+                                <div class="docx-code">
+                                    <button class="btn-copy" onclick="CopyToClipboard('copy_addBtn')">
+                                        <span class="tooltiptext" id="myTooltip">Copy</span>
+                                    </button>
+                                    <pre style="padding: 0 20px;background: #f5f7f8;">
+                                        <code  style="border-color: transparent; font-size: 14px;" id="copy_addBtn">
+    &lt;td&gt;
+        &lt;!--[if mso]&gt;
+        &lt;v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+            href="button-link"
+            style="v-text-anchor:middle; width:200px; <span style="color: blue;">height:40px;" arcsize="10%"</span> stroke="f" fillcolor="#222222"&gt;
+            &lt;w:anchorlock/&gt;
+            &lt;center&gt;
+        &lt;![endif]--&gt;
+        &lt;a href="button-link" target="_blank"
+            style="-webkit-text-size-adjust:none;display:inline-block;text-decoration:none;background-color:#222222;<span style="color: blue;">border-radius:4px;</span>color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:40px;text-align:center;width:200px;"&gt;
+            Button Text
+        &lt;/a&gt;
+        &lt;!--[if mso]&gt;
+            &lt;/center&gt;
+        &lt;/v:roundrect&gt;
+        &lt;![endif]--&gt;
+    &lt;/td&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+
+
+                            <h5 id="text" style="margin-bottom:5px; font-weight: 700;">Add Texts </h5>
+                            <div style="margin-bottom: 20px;">
+                                <p style="margin-bottom: 10px;">
+                                    you can add text if it's a Paragraph or headings.
+                                    <br>
+                                    If it's A <code>&lt;p&gt;&lt;/p&gt;</code> or any headings like
+                                    <code>&lt;h1&gt;&lt;/h1&gt;</code> you should add inline stle for every element like
+                                    <b>Font-size</b>, <b>Font-weight</b> and <b>color</b>, as it wont appear in a
+                                    correct way without them.
+                                    <b> Example</b>
+                                </p>
+                                <!--
+                                =***= 
+                                link a put inside p
+                                • to change border radius => arcsize=(border-radius / height)%  
+                                • variables to dynamicly changes => button-link + v:roundrect(width-height-arcsize-fillcolor) + a style(from background-color to the end)
+                                =***=
+                                -- Problem => mso-hide:all;
+                                -- to make td with same width => add table-layout:fixed; on table
+                            -->
+
+                                <div class="docx-code">
+                                    <button class="btn-copy" onclick="CopyToClipboard('copy_addtxt')">
+                                        <span class="tooltiptext" id="myTooltip">Copy</span>
+                                    </button>
+                                    <pre style="padding: 0 20px;background: #f5f7f8;">
+                                        <code  style="border-color: transparent; font-size: 14px;" id="copy_addtxt">
+&lt;tr&gt;
+    &lt;td colspan="99" align="center"&gt;
+        &lt;p
+        style="color:#364253; font-family:Arial, sans-serif; font-size:20px; line-height: 30px; direction: rtl; font-weight: 700;"&gt;
+        Text Text
+        &lt;/p&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modals  -->
+                        <div class="docx-modals" id="modals">
+                            <h3 style="margin-top: 10px;margin-bottom: 20px;font-weight: 700;">Templates</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="" style="display: inline-block;">
+                                        <img src="./temp-1.png" alt="template 1" width="100%">
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="" style="display: inline-block;">
+                                        <img src="./temp-2.png" alt="template 2" width="100%">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Download General Template -->
+                        <div id="download_template" style="margin: 30px; margin-left:0px;">
+                            <div class="d-flex align--items-center justify-content-between">
+                                <h3 style="margin-bottom: 20px;font-weight: 700;">Download General Email Template</h3>
+                                <span>
+                                    <a href="" class="btn btn-primary">Download</a>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    /* background: url('./bg.jpg') no-repeat; */
+    /* background-size: cover; */
+    color: #333;
+    /* height: calc(100vh - 40px); */
+    /* padding: 20px; */
+}
+
+p {
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+code {
+    border: 1px solid #e4e4e4;
+    padding: 4px 4px 1px;
+    background: #f5f7f8;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+/***************/
+.wss-docx-header {
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    background: url('https://i.ibb.co/MZ2K9QH/bg-hdr.jpg') no-repeat center;
+    margin-bottom: 30px;
+    background-size: cover;
+    z-index: 999;
+}
+
+main {
+    padding-top: 85px;
+}
+
+.wss-docx-header .logo {
+    text-align: right;
+}
+
+/***************/
+h3,
+h4,
+h5 {
+    padding: 10px 0;
+}
+
+.docx-code {
+    padding: 0 20px;
+    background: #f5f7f8;
+    position: relative;
+}
+
+.btn-primary {
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: #479FD3;
+    border-color: #479FD3;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn-copy {
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: #479FD3;
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.wss-docx-body {
+    overflow-y: scroll;
+    height: calc(100vh - 100px);
+    scroll-behavior: smooth;
+}
+
+.wss-docx-body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.wss-docx-body::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.wss-docx-body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.wss-docx-nav {
+    /* position: fixed; */
+    padding: 20px;
+    list-style: none;
+    font-size: 16px;
+    background: #479FD3;
+    border-radius: 20px;
+    color: #ffffff;
+    box-shadow: 0px 15px 25px 0px rgb(219 242 255);
+    min-width: 250px;
+    max-width: 350px;
+    margin: 0 auto;
+
+}
+
+@media (max-width:991px) {
+    .wss-docx-nav {
+        left: 20%;
+    }
+}
+
+.wss-docx-nav button {
+    font-size: 14px;
+    color: #fff;
+    background: transparent;
+    border: 0;
+}
+
+.wss-docx-nav a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.wss-docx-nav>li {
+    border-bottom: 1px solid rgb(165 205 255 / 50%);
+    padding: 5px 0;
+}
+
+.wss-docx-nav>li:last-child {
+    border: 0;
+}
+
+.docx-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.docx-welcome>h3 {
+    font-size: 40px;
+    width: 80%;
+    line-height: 50px;
+    color: #479FD3;
+}
+
+.wss-docx-main>.wss-docx-body {
+    padding: 20px;
+    border: 3px solid #dbf2ff;
+    border-radius: 20px;
+    /* box-shadow: 0px 15px 25px 0px #dbf2ff; */
+    margin-left: 20px;
+}
+
+.docx-head-structure,
+/* .docx-header-structure, */
+.docx-body-structure,
+/* .docx-footer-structure, */
+.docx-components,
+.docx-modals {
+    border-bottom: 2px solid #479FD3;
+}
+
+.docx-head-structure,
+.docx-body-structure,
+.docx-modals,
+.docx-components {
+    padding: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.docx-email-header,
+.docx-email-body,
+.docx-email-footer {
+    padding: 0 15px;
+}
+
+.structure-options-list {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.structure-options-list>li {
+    position: relative;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.structure-options-list>li::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #479FD3;
+}
+
+.structure-options-list>li:last-child {
+    border-color: #479FD3;
+}
+
+/* .wss-docx-nav .sub-menu .sub-menu .sub-menu a {
+                font-size: 13px;
+            }
+
+            .wss-docx-nav a:hover {
+                text-decoration: underline;
+            } */
